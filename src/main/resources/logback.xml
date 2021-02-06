@@ -1,7 +1,13 @@
 <configuration>
-    <property name="LOG_DIR" value="/Users/eomtaejun/Documents/LOG/" />
-    <property name="LOG_PATH_NAME" value="${LOG_DIR}/kick_board" />
-
+	<springProfile name="prod">
+		<property name="LOG_PATH_NAME"
+			value="/root/LOG/kick_board" />
+	</springProfile>
+	<springProfile name="dev">
+		<property name="LOG_PATH_NAME"
+			value="/Users/eomtaejun/Documents/LOG/kick_board" />
+	</springProfile>
+	
     <!-- 파일 생성하는 appender-->
     <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH_NAME}</file>
