@@ -39,8 +39,10 @@
   <logger name="jdbc.connection" level="OFF"/>
   
   <root level="INFO">
+    <springProfile name="prod">
+    	<appender-ref ref="ROLLING" />
+	</springProfile>
     <appender-ref ref="STDOUT" />
-    <appender-ref ref="ROLLING" />
   </root>
   
 </configuration>
