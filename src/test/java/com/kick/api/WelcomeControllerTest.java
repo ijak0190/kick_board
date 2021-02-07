@@ -1,5 +1,6 @@
 package com.kick.api;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -40,7 +41,8 @@ class WelcomeControllerTest {
 		// when 
 		// then 
 //		this.mockMvc.perform(get("/boardList").contentType(MediaType.APPLICATION_JSON)) .andExpect(status().isOk()).andDo(print()); 
-		
+		String value = "안녕";
+		assertEquals(value,"안녕");
 	}
 }
 
