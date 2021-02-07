@@ -26,9 +26,9 @@ class WelcomeControllerTest {
 	private MockMvc mockMvc;
 	
 	
-	private static ObjectMapper objectMapper = new ObjectMapper(); 
+//	private static ObjectMapper objectMapper = new ObjectMapper(); 
 	
-	final BoardVo boardVo = BoardVo.builder().brdIdx(0).brdSbj("°«´ëÈñ").build(); 
+//	final BoardVo boardVo = BoardVo.builder().brdIdx(0).brdSbj("í…ŒìŠ¤").build(); 
 	 
 //	@BeforeEach 
 //	public void setup() throws Exception { 
@@ -39,7 +39,8 @@ class WelcomeControllerTest {
 	public void testGetUsers() throws Exception { 
 		// when 
 		// then 
-		this.mockMvc.perform(get("/boardList").contentType(MediaType.APPLICATION_JSON)) .andExpect(status().isOk()).andDo(print()); 
+//		this.mockMvc.perform(get("/boardList").contentType(MediaType.APPLICATION_JSON)) .andExpect(status().isOk()).andDo(print()); 
+		
 	}
 }
 
