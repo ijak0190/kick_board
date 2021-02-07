@@ -32,8 +32,8 @@ class WelcomeControllerTest {
 //		this.mockMvc.perform(post("/boardList").contentType(MediaType.APPLICATION_JSON).content(param)) .andExpect(status().isOk()).andDo(print()); 
 //	} 
 	@Test 
-	public void testGetUsers1() throws Exception { 
-		this.mockMvc.perform(get("/boardList").contentType(MediaType.APPLICATION_JSON)) .andExpect(status().isOk()).andDo(print()); 
+	public void testGetUsers() throws Exception { 
+		//this.mockMvc.perform(get("/boardList").contentType(MediaType.APPLICATION_JSON)) .andExpect(status().isOk()).andDo(print()); 
 		String value = "안녕";
 		assertEquals(value,"안녕");
 	}
