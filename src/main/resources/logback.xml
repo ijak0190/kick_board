@@ -3,6 +3,10 @@
 		<property name="LOG_PATH_NAME"
 			value="/root/LOG/kick_board" />
 	</springProfile>
+	<springProfile name="git">
+		<property name="LOG_PATH_NAME"
+			value="/home/travis/build/ijak0190/kick_board/LOG/kick_board" />
+	</springProfile>
 	<springProfile name="dev">
 		<property name="LOG_PATH_NAME"
 			value="/Users/eomtaejun/Documents/LOG/kick_board" />

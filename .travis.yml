@@ -8,14 +8,15 @@ branches:
 
 before_install:
  - chmod +x gradlew
- 
+ - export SPRING_PROFILES_ACTIVE=git
+
 # Travis CI 서버의 Home
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew test --debug"
+script: "./gradlew test"
 
 # CI 실행 완료시 메일로 알람
 notifications:
