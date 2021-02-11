@@ -42,3 +42,18 @@ deploy:
     on:
       repo: ijak0190/kick_board #Github 주소
       branch: master
+      
+  - provider: codedeploy
+    access_key_id: AKIATS7V25TRCMC7N7AK # Travis repo settings에 설정된 값
+    secret_access_key: BzRrVD0UgrpHrPH880NGwip76kRvGpg2moXxIwaB # Travis repo settings에 설정된 값
+    bucket: kichboardbackup # S3 버킷
+    key: springboot-webservice.zip # S3 버킷에 저장된 springboot-webservice.zip 파일을 EC2로 배포
+    bundle_type: zip
+    application: kick-board # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: kick-board # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
+    on:
+      repo: ijak0190/kick_board
+      branch: master
+      
