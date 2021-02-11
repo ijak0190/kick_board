@@ -23,3 +23,22 @@ notifications:
   email:
     recipients:
       - ijak0190@gmail.com 
+
+before_deploy:
+  - zip -r springboot-webservice *
+  - mkdir -p deploy
+  - mv springboot-webservice.zip deploy/springboot-webservice.zip
+
+deploy:
+  - provider: s3
+    access_key_id: AKIATS7V25TRCMC7N7AK # Travis repo settings에 설정된 값
+    secret_access_key: BzRrVD0UgrpHrPH880NGwip76kRvGpg2moXxIwaB # Travis repo settings에 설정된 값
+    bucket: kickboard-webservice-deploy # 6-3-3에서 생성한 S3 버킷
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: public_read
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true
+    on:
+      repo: ijak0190/kick_board #Github 주소
+      branch: master
