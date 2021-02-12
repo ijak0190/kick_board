@@ -1,7 +1,7 @@
 <configuration>
 	<springProfile name="prod">
 		<property name="LOG_PATH_NAME"
-			value="/root/LOG/kick_board" />
+			value="/home/ec2-user/app/travis/log" />
 	</springProfile>
 	<springProfile name="git">
 		<property name="LOG_PATH_NAME"
