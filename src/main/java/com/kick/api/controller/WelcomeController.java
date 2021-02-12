@@ -18,7 +18,7 @@ public class WelcomeController {
 	
 	@RequestMapping("/")
 	public String welcome() {
-		return "welcome";
+		return "welcome test";
 	}
 	
 	@RequestMapping("/boardList")
